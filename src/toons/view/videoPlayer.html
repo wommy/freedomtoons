@@ -1,0 +1,27 @@
+<md-dialog aria-label="Freedom Toons Video Player" ng-cloak>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{selected.snippet.title}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <youtube-video video-id="selected.id.videoId"></youtube-video>
+        <md-dialog-actions layout="row">
+            <!--<md-button ng-click="get_prev_toon()">-->
+                <!--Previous-->
+            <!--</md-button>-->
+            <!--<md-button ng-click="get_next_toon()">-->
+                <!--Next-->
+            <!--</md-button>-->
+            <!--<span flex></span>-->
+            <!--<md-button ng-click="answer('useful')">-->
+                <!--Donate-->
+            <!--</md-button>-->
+        </md-dialog-actions>
+    </form>
+</md-dialog>

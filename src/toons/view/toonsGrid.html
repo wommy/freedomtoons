@@ -1,0 +1,31 @@
+<!--<md-chips ng-model="tc.filter_chips"-->
+          <!--placeholder="Filter: Enter a tag"-->
+          <!--secondary-placeholder="+Tag">-->
+<!--</md-chips>-->
+<md-grid-list
+        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="5"
+        md-row-height-gt-md="16:15" md-row-height="4:3"
+        md-gutter="8px" md-gutter-gt-sm="4px"
+        enableHorizontalScrollbar="1">
+
+    <md-grid-tile ng-repeat="toon in data"
+                  md-rowspan="1"
+                  md-colspan="1"
+                  md-colspan-sm="1"
+                  md-colspan-xs="1">
+
+        <img src="{{toon.snippet.thumbnails.high.url}}" class="md-card-image toon-thumb clickable" alt="image caption"
+             ng-click="showAdvanced('a', toon)" ng-mouseenter="grid_mouse_hover=true"
+             ng-mouseleave="grid_mouse_hover=false">
+
+        <md-grid-tile-footer class="toon-tile-footer-hover" ng-if="grid_mouse_hover">
+            <h3>{{toon.snippet.title}}</h3>
+        </md-grid-tile-footer>
+
+        <md-grid-tile-footer class="toon-tile-footer" ng-if="!grid_mouse_hover">
+            <h3>{{toon.snippet.title}}</h3>
+        </md-grid-tile-footer>
+
+    </md-grid-tile>
+
+</md-grid-list>

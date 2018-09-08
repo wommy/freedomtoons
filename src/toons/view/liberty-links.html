@@ -1,0 +1,58 @@
+<div layout="row">
+    <div flex-gt-lg="25"
+         flex-gt-md="15"
+         flex-gt-sm="5"
+         layout="column">
+
+    </div>
+    <div layout="column" flex>
+        <md-toolbar class="md-accent">
+            <div class="md-toolbar-tools">
+                <h2 class="md-flex">Freedom Links!</h2>
+            </div>
+        </md-toolbar>
+
+        <div class='md-padding' layout="row" layout-wrap>
+            <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch ng-repeat="link in links">
+                <md-card-title>
+
+                    <md-card-title-text>
+                        <span class="md-headline">{{link.title}}</span>
+                        <span class="md-subhead">{{link.subtitle}}</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media">
+                            <img ng-src="{{link.image}}" class="md-card-image">
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-content>
+                    <p ng-repeat="par in link.desc">{{par}}</p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+
+                    <md-button class="md-icon-button" href="https://twitter.com/seamus_coughlin" target="_blank" ng-if="link.twitter!=''">
+                        <md-icon md-svg-src="twitter"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" href="https://www.facebook.com/FreedomToons" target="_blank" ng-if="link.facebook!=''">
+                        <md-icon md-svg-src="facebook"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" href="https://www.youtube.com/user/Cartanimation" target="_blank" ng-if="link.youtube!=''">
+                        <md-icon md-svg-src="youtube"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" href="https://www.patreon.com/FreedomToons" target="_blank" ng-if="link.patreon!=''">
+                        <md-icon md-svg-src="patreon"></md-icon>
+                    </md-button>
+
+                    <md-button ng-href="{{link.url}}" ng-if="link.url!=''">Visit</md-button>
+
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+    <div flex-gt-lg="25"
+         flex-gt-md="15"
+         flex-gt-sm="5"
+         layout="column">
+    </div>
+</div>
