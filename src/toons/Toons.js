@@ -22,6 +22,12 @@
             controllerAs:'flc'
         });
 
+        $routeProvider.when('/donate',{
+            templateUrl:'src/toons/view/donate.html',
+            controller:'ToonController',
+            controllerAs:'flc'
+        });
+
         $routeProvider.otherwise({
             redirectTo: '/'
         });
