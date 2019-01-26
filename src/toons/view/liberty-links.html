@@ -40,11 +40,9 @@
                     <md-button class="md-icon-button" href="https://www.youtube.com/user/Cartanimation" target="_blank" ng-if="link.youtube!=''">
                         <md-icon md-svg-src="youtube"></md-icon>
                     </md-button>
-                    <md-button class="md-icon-button" href="https://www.patreon.com/FreedomToons" target="_blank" ng-if="link.patreon!=''">
-                        <md-icon md-svg-src="patreon"></md-icon>
+                    <md-button ng-href="{{link.url}}" ng-if="link.url!=''">
+                        Visit
                     </md-button>
-
-                    <md-button ng-href="{{link.url}}" ng-if="link.url!=''">Visit</md-button>
 
                 </md-card-actions>
             </md-card>
