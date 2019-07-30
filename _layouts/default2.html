@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Freedom Toons</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="assets/app.css"/>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="node_modules/angular-material/angular-material.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+    <script src="src/toons/Toons.js"></script>
+    <script src="src/toons/GoogleApiService.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+    <script src="src/toons/ToonService.js"></script>
+    <script src="src/toons/ToonController.js"></script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="assets/js/youtube-embed.js"></script>
+
+    <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body ng-app="starterApp" layout="row" ng-controller="ToonController as tc" ng-cloak>
+
+<div ng-include="'src/leftnav/view/leftnav.html'" layout="column"></div>
+
+<div flex layout="column" layout-fill tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+        <md-button id="main" class="menu" hide-gt-sm ng-click="tc.toggleMenu()" aria-label="Show User List">
+            <md-icon md-svg-icon="menu"></md-icon>
+        </md-button>
+        <!--TODO link to data-->
+        <!--<h3>Freedom Toons</h3>-->
+        <span flex></span><h2>FREEDOM TOONS</h2>
+        <!--<a href="#/">-->
+            <!--<img hide-xs hide-sm hide-md src="assets/img/title_banners/1000x66_freedom_toons.jpg"-->
+                 <!--style="width: 1000px; height: 64px;"/>-->
+            <!--<img hide-xs hide-sm hide-lg hide-xl src="assets/img/title_banners/700x62_freedom_toons.jpg"-->
+                 <!--style="width: 700px; height: 64px;"/>-->
+            <!--<img hide-md hide-lg hide-xl src="assets/img/title_banners/300x62_freedom_toons.jpg"-->
+                 <!--style="width: 300px; height: 55px;"/>-->
+        <!--</a>-->
+        <span flex></span>
+    </md-toolbar>
+
+    <md-content flex style="overflow: scroll;">
+        <ng-view></ng-view>
+    </md-content>
+
+</div>
+
+<script type="text/javascript">
+
+    angular
+            .module('starterApp', ['ngMaterial', 'toons'])
+            .config(function ($mdThemingProvider, $mdIconProvider) {
+
+                $mdIconProvider
+                        .defaultIconSet("./assets/svg/avatars.svg", 128)
+                        .icon("menu", "./assets/svg/menu.svg", 24)
+                        .icon("share", "./assets/svg/share.svg", 24)
+                        .icon("google_plus", "./assets/svg/google_plus.svg", 512)
+                        .icon("hangouts", "./assets/svg/hangouts.svg", 512)
+                        .icon("twitter", "./assets/svg/twitter.svg", 512)
+                        .icon("phone", "./assets/svg/phone.svg", 512)
+                        .icon("left-chevron", "./assets/svg/left-chevron.svg", 512)
+                        .icon("right-chevron", "./assets/svg/right-chevron.svg", 512)
+                        .icon("facebook", "./assets/svg/facebook.svg", 512)
+                        .icon("youtube", "./assets/svg/youtube.svg", 512)
+                        .icon("google-plus", "./assets/svg/google-plus.svg", 512)
+                        .icon("patreon", "./assets/svg/patreon.svg", 512);
+                ;
+
+                $mdThemingProvider.theme('default')
+                        .primaryPalette('blue')
+                        .accentPalette('red');
+
+            });
+
+</script>
+
+</body>
+</html>

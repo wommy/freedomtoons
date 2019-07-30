@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{site.name}}</title>
+	<style>
+		header h1, header nav{
+			display: inline-block;
+			vertical-align: top;
+		}
+		main{
+			padding-top: 5rem;
+			margin-left: 10rem;
+		}
+		header h1{
+			padding: 0 19.5rem;
+			background-color: rgb(33,150,243);
+			color:#FFF;
+			z-index: 2;
+		}
+	</style>
+</head>
+<body style='font-family: sans-serif;'>
+	{% include nav.html%}
+	<main>
+		{{content}}
+	</main>
+	<script></script>
+</body>
+</html>
