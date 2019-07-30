@@ -7,8 +7,8 @@ layout: default
 	.grid-tile{
 		display: inline-block;
 		height: 200px;
-		width: 265px;
-		margin: .25rem;
+		width: 260px;
+		margin: 2px;
 		vertical-align: top;
 	}
 	figure img{
