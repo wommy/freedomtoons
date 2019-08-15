@@ -1,0 +1,15 @@
+extends /_template.pug
+
+block content
+	div(layout='row')
+		div(flex='', layout='column')
+			md-toolbar.md-accent
+				.md-toolbar-tools
+					h2.md-flex Donate to Freedomtoons
+			div(layout='row')
+				div(flex='', layout='column')
+					iframe(src='https://donorbox.org/embed/freedomtoons?amount=2&default_interval=m', width='100%', style='min-width:310px; min-height:1352px', seamless='seamless', name='donorbox', frameborder='0', scrolling='no', allowpaymentrequest='')
+						| <style>.donation-widget.tabs{max-width: auto !important;}</style>
+			md-toolbar.md-accent
+				.md-toolbar-tools
+					h2.md-flex Thank you for your support!
