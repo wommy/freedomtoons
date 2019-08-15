@@ -6,37 +6,28 @@ layout: default
 <style>
 	.grid-tile{
 		display: inline-block;
-		height: 200px;
+		height: 260px;
 		width: 260px;
 		margin: 2px;
 		vertical-align: top;
 	}
-	figure img{
-		width: 100%;
-		position: relative;
-		top:0;
-		left:0;
-		z-index: -1;
-	}
-	figcaption{
-		position: relative;
-		top: -50px;
-		background-color: #000;
+	.grid-tile h3{
 		color: #FFF;
-		height: 2.75rem;
-		font-size: 14px;
-	}
-	figcaption h3{
+		background-color: #000;
+		height: 3rem;
 		margin: 0;
-		padding: .25rem .75rem;
+		padding: .5rem;
+	}
+	.grid-tile img{
+		width: 100%;
 	}
 </style>
 <div class="grid-list">
 	{%-for video in site.data.videos%}
-	<figure class="grid-tile" id='myBtn'>
+	<div class="grid-tile" id='myBtn'>
+		<h3>{{video.title}}</h3>
 		<img src="https://i.ytimg.com/vi/{{video.id}}/hqdefault.jpg" alt="">
-		<figcaption><h3>{{video.title}}</h3></figcaption>
-	</figure>
+	</div>
 	{%-endfor%}
 </div>
 {% include modal.html%}
