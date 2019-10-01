@@ -40,6 +40,8 @@
         }
     </style>
 
+    <base href="/">
+
 </head>
 
 <body ng-app="starterApp" layout="row" ng-controller="ToonController as tc" ng-cloak>
@@ -76,7 +78,7 @@
 
     angular
             .module('starterApp', ['ngMaterial', 'toons'])
-            .config(function ($mdThemingProvider, $mdIconProvider) {
+            .config(function ($mdThemingProvider, $mdIconProvider, $locationProvider) {
 
                 $mdIconProvider
                         .defaultIconSet("./assets/svg/avatars.svg", 128)
@@ -97,6 +99,8 @@
                 $mdThemingProvider.theme('default')
                         .primaryPalette('blue')
                         .accentPalette('red');
+
+                $locationProvider.html5Mode(true);
 
             });
 
