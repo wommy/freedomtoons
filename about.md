@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: _default
 ---
 ## About Freedomtoons
 

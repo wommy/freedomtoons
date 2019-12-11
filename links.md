@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: _default
 links: 
 - title: 'Liberty Republic'
   url: http://thelibertarianrepublic.com/

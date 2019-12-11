@@ -1,6 +1,6 @@
 ---
 title: FreedomToons
-layout: default
+layout: _default
 ---
 
 <style>
@@ -32,7 +32,7 @@ layout: default
 	}
 </style>
 <div class="grid-list">
-	{%-for video in site.data.videos%}
+	{%- for video in data.videos.json %}
 	<figure class="grid-tile" id='myBtn'>
 		<img src="https://i.ytimg.com/vi/{{video.id}}/hqdefault.jpg" alt="">
 		<figcaption><h3>{{video.title}}</h3></figcaption>

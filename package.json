@@ -1,0 +1,12 @@
+{
+  "name": "freedomtoons",
+  "version": "1.0.0",
+  "description": "freedomtoons built with 11ty",
+  "main": "index.js",
+  "repository": "git@github.com:wommy/freedomtoons_jekyll.git",
+  "author": "wommy <tom@technomad.media>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  }
+}
