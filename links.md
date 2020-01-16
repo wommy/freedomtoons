@@ -24,7 +24,7 @@ links:
 
 ## Freedom Links!
 
-{%- for link in page.links%}
+{%- for link in links%}
 <div>
 	<h2>{{link.title}}</h2>
 	<a href="{{link.url}}" style="display:block;">VISIT</a>
