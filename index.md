@@ -34,8 +34,10 @@ layout: _default
 <div class="grid-list">
 	{%- for video in videos %}
 	<figure class="grid-tile" id='myBtn'>
-		<img src="https://i.ytimg.com/vi/{{video.id}}/hqdefault.jpg" alt="">
-		<figcaption><h3>{{video.title}}</h3></figcaption>
+		<a href='videos/{{ video.title | slug }}/'>
+			<img src="https://i.ytimg.com/vi/{{video.id}}/hqdefault.jpg" alt="">
+			<figcaption><h3>{{video.title}}</h3></figcaption>
+		</a>
 	</figure>
 	{%-endfor%}
 </div>

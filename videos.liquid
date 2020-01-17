@@ -1,0 +1,11 @@
+---
+layout: _default
+pagination:
+  data: videos
+  size: 1
+  alias: video
+permalink: "videos/{{ video.title | slug }}/"
+---
+
+<h2>{{video.title}}</h2>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/{{video.id}}" frameborder="0" allowfullscreen></iframe>
