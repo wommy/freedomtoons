@@ -32,16 +32,18 @@ layout: _default
 	}
 </style>
 <div class="grid-list">
-	{%- for video in videos %}
+	{%- for video in yt_api.items %}
 	<figure class="grid-tile" id='myBtn'>
-		<a href='videos/{{ video.title | slug }}/'>
-			<img src="https://i.ytimg.com/vi/{{video.id}}/hqdefault.jpg" alt="">
-			<figcaption><h3>{{video.title}}</h3></figcaption>
+		<a href="videos/{{ video.snippet.title | slug }}/">
+			<img src="{{ video.snippet.thumbnails.medium.url}}" alt="">
+			<figcaption><h3>{{ video.snippet.title }}</h3></figcaption>
 		</a>
 	</figure>
 	{%-endfor%}
 </div>
-{% include modal.html%}
+{% comment %}
+{% include modal.html %}
+{% endcomment %}
 <script>
 </script>
 {%- if jekyll.environment == "development" %}

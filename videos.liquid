@@ -1,11 +1,12 @@
 ---
 layout: _default
 pagination:
-  data: videos
+  data: yt_api.items
   size: 1
   alias: video
-permalink: "videos/{{ video.title | slug }}/"
+permalink: "videos/{{ video.snippet.title | slug }}/"
 ---
 
-<h2>{{video.title}}</h2>
-<iframe width="640" height="480" src="https://www.youtube.com/embed/{{video.id}}" frameborder="0" allowfullscreen></iframe>
+<h2>{{video.snippet.title}}</h2>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/{{video.snippet.resourceId.videoId}}" frameborder="0" allowfullscreen></iframe>
+<p>{{ video.snippet.description | markdownify }}</p>
