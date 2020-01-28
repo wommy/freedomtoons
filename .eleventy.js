@@ -1,7 +1,7 @@
 module.exports = function(eleventyConfig) {
 	const markdownIt = require("markdown-it");
 	const markdownItRenderer = new markdownIt({
-		breaks: true
+		breaks: true, linkify: true
 	});
 	eleventyConfig.addFilter("byeRight", function(title) {
 		return `${title.replace(" | FreedomToons","")}`
