@@ -1,15 +1,15 @@
-module.exports = function(eleventyConfig) {
+module.exports = (config) => {
 	const markdownIt = require("markdown-it");
 	const markdownItRenderer = new markdownIt({
 		breaks: true, linkify: true
 	});
-	eleventyConfig.addFilter("byeRight", function(title) {
+	config.addFilter("byeRight", function(title) {
 		return `${title.replace(" | FreedomToons","")}`
 	});
-	eleventyConfig.addFilter("nl2br", function(content) {
+	config.addFilter("nl2br", function(content) {
 		return `${content.replace(/\n/g, "<br>")}`
 	});
-	eleventyConfig.addFilter('markdownify', (str) => {
+	config.addFilter('markdownify', (str) => {
 		return markdownItRenderer.renderInline(str)
 	});
 }
