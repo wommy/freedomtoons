@@ -3,13 +3,7 @@ module.exports = (config) => {
 	const markdownItRenderer = new markdownIt({
 		breaks: true, linkify: true
 	});
-	config.addFilter("byeRight", function(title) {
-		return `${title.replace(" | FreedomToons","")}`
-	});
-	config.addFilter("nl2br", function(content) {
-		return `${content.replace(/\n/g, "<br>")}`
-	});
-	config.addFilter('markdownify', (str) => {
-		return markdownItRenderer.renderInline(str)
-	});
+	config.addFilter("byeRight", s => `${s.replace(" | FreedomToons","")}` );
+	config.addFilter("nl2br", s => `${s.replace(/\n/g, "<br>")}` );
+	config.addFilter('markdownify', s => markdownItRenderer.renderInline(s) );
 }
