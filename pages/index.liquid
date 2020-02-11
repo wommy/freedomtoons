@@ -6,10 +6,10 @@ permalink: /
 {% include __index.css %}
 </style>
 {%- for video in yt_api.items %}
-<figure class="grid-tile" id='myBtn'>
-	<a href="videos/{{ video.snippet.title | slug }}/">
+<a class="grid-tile" href="videos/{{ video.snippet.title | slug }}/">
+	<figure>
 		<img src="{{ video.snippet.thumbnails.medium.url}}" alt="">
 		<figcaption><h3>{{ video.snippet.title }}</h3></figcaption>
-	</a>
-</figure>
+	</figure>
+</a>
 {%-endfor%}
