@@ -6,6 +6,8 @@ pagination:
   alias: video
 permalink: "videos/{{ video.snippet.title | slug }}/"
 ---
-<h2>{{video.snippet.title}}</h2>
-<iframe width="640" height="480" src="https://www.youtube.com/embed/{{video.snippet.resourceId.videoId}}" frameborder="0" allowfullscreen></iframe>
-<p>{{ video.snippet.description | markdownify }}</p>
+<article>
+	<iframe src="https://www.youtube.com/embed/{{ video.snippet.resourceId.videoId }}" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+	<h2>{{ video.snippet.title }}</h2>
+	<p>{{ video.snippet.description | markdownify }}</p>
+</article>
