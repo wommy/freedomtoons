@@ -11,5 +11,5 @@ permalink: "videos/{{ video.snippet.title | slug }}/"
 		<h2>{{ video.snippet.title }}</h2>
 	</header>
 	<iframe src="https://www.youtube.com/embed/{{ video.snippet.resourceId.videoId }}" width="640" height="480" frameborder="0" allowfullscreen></iframe>
-	<p>{{ video.snippet.description | markdownify }}</p>
+	<!-- <p>{{ video.snippet.description | markdownify }}</p> -->
 </article>
