@@ -7,18 +7,41 @@ pagination:
 permalink: "videos/{{ video.snippet.title | slug }}/"
 ---
 <style>
+	main div {
+		display: flex; 
+		width: 100%;
+	}
 	article {
-		max-width: 640px;
+		width: 40rem;
 		display: flex;
 		flex-direction: column;
 	}
+	article header h2 {
+		margin: .5rem 0;
+	}
+	.ads {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 4rem;
+		border: 1px solid black;
+		border-radius: 9px;
+		margin: .5rem;
+	}
 </style>
-<div class="ads"></div>
-<article>
-	<header>
-		<h2>{{ video.snippet.title }}</h2>
-	</header>
-	<iframe src="https://www.youtube.com/embed/{{ video.snippet.resourceId.videoId }}" width="640" height="480" frameborder="0" allowfullscreen></iframe>
-	<!-- <p>{{ video.snippet.description | markdownify }}</p> -->
-</article>
-<div class="ads"></div>
+<div>
+	<section class="ads">
+		<p>ADS</p>
+	</section>
+	<article>
+		<header>
+			<h2>{{ video.snippet.title }}</h2>
+		</header>
+		<iframe src="https://www.youtube.com/embed/{{ video.snippet.resourceId.videoId }}" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+		<!-- <p>{{ video.snippet.description | markdownify }}</p> -->
+	</article>
+	<section class="ads">
+		<p>ADS</p>
+	</section>
+</div>
