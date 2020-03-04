@@ -19,6 +19,16 @@ aside {
 	display: none;
 }
 
+aside nav {
+	display: flex;
+	flex-direction: column;
+}
+
+aside img {
+	max-width: 150px;
+	height: auto;
+}
+
 aside i {
 	display: block;
 }
