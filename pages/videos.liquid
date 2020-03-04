@@ -13,6 +13,7 @@ permalink: "videos/{{ video.snippet.title | slug }}/"
 		flex-direction: column;
 	}
 </style>
+<div class="ads"></div>
 <article>
 	<header>
 		<h2>{{ video.snippet.title }}</h2>
@@ -20,3 +21,4 @@ permalink: "videos/{{ video.snippet.title | slug }}/"
 	<iframe src="https://www.youtube.com/embed/{{ video.snippet.resourceId.videoId }}" width="640" height="480" frameborder="0" allowfullscreen></iframe>
 	<!-- <p>{{ video.snippet.description | markdownify }}</p> -->
 </article>
+<div class="ads"></div>
