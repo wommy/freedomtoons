@@ -5,11 +5,13 @@ permalink: /
 <style>
 {% include __index.css %}
 </style>
-{%- for video in yt_api.items %}
-<a class="grid-tile" href="videos/{{ video.snippet.title | slug }}/">
-	<figure>
-		<img src="{{ video.snippet.thumbnails.medium.url}}" alt="">
-		<figcaption><h3>{{ video.snippet.title }}</h3></figcaption>
-	</figure>
-</a>
-{%-endfor%}
+<div class="toon-wrapper">
+	{%- for video in yt_api.items %}
+	<a class="grid-tile" href="videos/{{ video.snippet.title | slug }}/">
+		<figure>
+			<img src="{{ video.snippet.thumbnails.medium.url}}" alt="">
+			<figcaption><h3>{{ video.snippet.title }}</h3></figcaption>
+		</figure>
+	</a>
+	{%-endfor%}
+</div>
