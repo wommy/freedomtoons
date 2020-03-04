@@ -10,8 +10,11 @@
 	</style>
 </head>
 <body>
-	{% include nav.html%}
+	{% include nav.html %}
 	<main>
+		<header>
+			<h1>{{pkg.name|upcase}}</h1>
+		</header>
 		{{content}}
 	</main>
 	<script></script>
