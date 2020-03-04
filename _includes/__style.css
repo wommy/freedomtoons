@@ -24,9 +24,14 @@ aside nav {
 	flex-direction: column;
 }
 
+aside header {
+	padding: 0;
+}
+
 aside img {
-	max-width: 150px;
-	height: auto;
+	max-height: 4rem;
+	width: auto;
+	padding: .25rem;
 }
 
 aside i {
