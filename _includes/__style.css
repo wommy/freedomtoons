@@ -12,7 +12,6 @@ header {
 	background-color: rgb(22, 44, 74);
 	color: #FFF;
 	text-align: center;
-	padding: .25rem;
 }
 
 aside {
@@ -22,10 +21,6 @@ aside {
 aside nav {
 	display: flex;
 	flex-direction: column;
-}
-
-aside header {
-	padding: 0;
 }
 
 aside img {
