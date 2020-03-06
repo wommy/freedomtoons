@@ -14,19 +14,36 @@
 	<main>
 		<header>
 			<style>
-				main > header > img:nth-of-type(1) {
-					width: calc(100% * 210 / 1210);
+				main > header {
+					align-items: flex-end;
 				}
-				main > header > img:nth-of-type(2) {
-					width: calc(100% * 700 / 1210);
+				:root {
+					--w1: 210;
+					--w2: 700;
+					--w3: 300;
+					--wT: calc(var(--w1) + var(--w2) + var(--w3));
+					--rw1: var(--w1) / var(--wT);
+					--rw2: var(--w2) / var(--wT);
+					--rw3: var(--w3) / var(--wT);
 				}
-				main > header > img:nth-of-type(3) {
-					width: calc(100% * 300 / 1210);
+				main > header > div > img {
+					width: 100%;
+					transform: translateY(4px);
+				}
+				main > header > div:nth-of-type(2) > img {
+					width: 120%;
+					transform: translateX(-8%) translateY(4px);
 				}
 			</style>
-			<img src="/__static/img/banner/characters1.png" alt="some characters">
-			<img src="/__static/img/banner/logo.png" alt="logo">
-			<img src="/__static/img/banner/characters2.png" alt="more characters">
+			<div style="width: calc(100% * var(--rw1));">
+				<img src="/__static/img/banner/characters1.png" alt="some characters">
+			</div>
+			<div style="width: calc(100% * var(--rw2)); z-index: 1;">
+				<img src="/__static/img/banner/logo.png" alt="logo">
+			</div>
+			<div style="width: calc(100% * var(--rw3));">
+				<img src="/__static/img/banner/characters2.png" alt="more characters">
+			</div>
 		</header>
 		{{content}}
 	</main>
