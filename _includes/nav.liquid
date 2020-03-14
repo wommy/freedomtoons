@@ -4,13 +4,13 @@
 			<img src="/__static/img/menu/menu-light.png" alt="menu">
 		</header>
 		<a href="/">
-			<img src="/__static/img/menu/home-{% unless page.url == '/' %}light{% else %}dark{% endunless %}.png" alt="home">
+			<img src="/__static/img/menu/home-{% if page.url == '/' %}dark{% else %}light{% endif %}.png" alt="home">
 		</a>
 		<a href="/about">
-			<img src="/__static/img/menu/about-{% unless page.url == '/about/' %}light{% else %}dark{% endunless %}.png" alt="about">
+			<img src="/__static/img/menu/about-{% if page.url == '/about/' %}dark{% else %}light{% endif %}.png" alt="about">
 		</a>
 		<a href="/donate">
-			<img src="/__static/img/menu/donate-{% unless page.url == '/donate/' %}light{% else %}dark{% endunless %}.png" alt="donate">
+			<img src="/__static/img/menu/donate-{% if page.url == '/donate/' %}dark{% else %}light{% endif %}.png" alt="donate">
 		</a>
 		<h4>Social Media</h4>
 		<nav>
