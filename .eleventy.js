@@ -5,5 +5,6 @@ module.exports = (config) => {
 	config.addFilter("nl2br", s => `${s.replace(/\n/g, "<br>")}` );
 	config.addFilter('markdownify', s => md.renderInline(s) );
 	config.addPassthroughCopy("__static/img");
+	config.addPassthroughCopy("__static/font");
 	config.addPassthroughCopy({"__static/favicon":"/"});
 }

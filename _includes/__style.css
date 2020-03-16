@@ -1,11 +1,17 @@
+@font-face {
+	font-family: handwriting20;
+	src: url(/__static/font/HandWriting20-Regular.ttf);
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-	font-family: sans-serif;
+	font-family: handwriting20, sans-serif;
 	display: flex;
+	font-size: 1.5rem;
 }
 
 header {
