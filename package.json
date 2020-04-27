@@ -1,0 +1,11 @@
+{
+  "name": "freedomtoons-aws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://git-codecommit.us-west-2.amazonaws.com/v1/repos/web",
+  "author": "wommy <tom@technomad.media>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

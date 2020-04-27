@@ -63,7 +63,7 @@
                 $scope.loading = true;
                 $http.get('https://www.googleapis.com/youtube/v3/search', {
                         params: {
-                            key: YOUTUBE_DATA_KEY,
+                            key: process.env.YOUTUBE_DATA_KEY,
                             type: 'video',
                             maxResults: '30',
                             channelId: channel_id,

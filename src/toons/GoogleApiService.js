@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 (function () {
     'use strict';
 
@@ -13,7 +15,7 @@
         var OAUTH2_CLIENT_ID = 'freedomtoons-1315';
         var PROJECT_NUMBER = '682804503639';
         var PROJECT_ID = '682804503639';
-        var YOUTUBE_DATA_KEY = 'AIzaSyA0l5XFr4ellwAHn59HKh3AnT4hKanb7OM';
+        var YOUTUBE_DATA_KEY = process.env.YOUTUBE_DATA_KEY;
         var OAUTH2_SCOPES = [
             'https://www.googleapis.com/auth/youtube'
         ];
